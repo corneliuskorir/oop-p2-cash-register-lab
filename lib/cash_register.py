@@ -11,11 +11,11 @@ methods: add_item(item, price, quantity), apply_discount(), void_last_transactio
 
 
 class CashRegister:
-    def __init__(self):
+    def __init__(self, discount):
         self._total = 0
         self._items = []
         self._previous_transactions = []
-        self._discount = 0
+        self._discount = discount or 0
 
     @property
     def discount(self):
