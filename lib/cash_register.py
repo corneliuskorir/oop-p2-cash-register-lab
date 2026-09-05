@@ -36,14 +36,14 @@ class CashRegister:
 
     def apply_discount(self):
         if not self._discount:
-            print("There is no discount to apply.\n")
+            print("There is no discount to apply.")
             return
         discount_total = self.total * (100 - self._discount) / 100
         self.total = (
             int(discount_total) if discount_total.is_integer() else discount_total
         )
 
-        print(f"After the discount, the total comes to ${self.total}.\n")
+        print(f"After the discount, the total comes to ${self.total}.")
 
     def void_last_transaction(self):
         if not self.previous_transactions:
